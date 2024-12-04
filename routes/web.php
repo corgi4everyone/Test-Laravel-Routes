@@ -87,8 +87,8 @@ Route::group(['middleware' => 'auth'], function () {
 // Put one Route Group code line here below
 
 Route::group(['prefix' => "admin"], function () {
-    Route::get('/dashboard',[AdminDashboardController::class,'index']);
-    Route::get('/stats',[StatsController::class,]);
+    Route::get('/dashboard',AdminDashboardController::class);
+    Route::get('/stats',StatsController::class);
 })->middleware(['is_admin']);
 
 
